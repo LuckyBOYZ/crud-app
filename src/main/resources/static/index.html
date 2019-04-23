@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD-app</title>
+    <script src="jquery-3.3.1.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div id="container">
+    <div id="div-all-patients">
+        <div id="util">
+            <input type="search" id="input-search" placeholder="Szukaj...">
+            <input type="button" id="input-add-patient" value="Add">
+        </div>
+        <table id="table">
+            <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Pesel</th>
+                <th style="display: none">Edycja</th>
+                <th style="display: none">Usunięcie</th>
+            </tr>
+            </thead>
+            <tbody id="patient-rows">
+            <tr id="row-template" style="display: none">
+                <td class="cell-firstName"></td>
+                <td class="cell-lastName"></td>
+                <td class="cell-pesel"></td>
+                <td><input type="button" class="edit-patient input-button" value="Edit"/></td>
+                <td><input type="button" class="remove-patient input-button" value="Remove"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="div-form-add-patient">
+        <form id="form-to-add-patient">
+            <div id="div-form-container">
+                <div class="a">
+                    <label for="firstName">Imię: <input type="text" id="firstName" class="input-text"></label>
+                    <!--<span class="message"></span>-->
+                </div>
+                <div class="a">
+                    <label for="lastName">Nazwisko: <input type="text" id="lastName" class="input-text"></label>
+                    <!--<span class="message"></span>-->
+                </div>
+                <div class="a">
+                    <label for="pesel">Pesel: <input type="number" id="pesel" class="input-text"></label>
+                    <!--<span class="message"></span>-->
+                </div>
+                <input type="button" value="Submit" id="button-patient-submit">
+                <input type="button" value="Back" class="button-to-back-on-first-page">
+            </div>
+        </form>
+    </div>
+
+
+    <div id="div-edit">
+        <p>Popraw swoje dane:</p>
+        <form>
+            <div>
+                Imię: <input type="text" class="first-name-edit input-text">
+            </div>
+            <div>
+                Nazwisko: <input type="text" class="last-name-edit input-text">
+            </div>
+            <div>
+                Pesel: <input type="text" class="pesel-edit input-text">
+            </div>
+            <input type="button" value="Edit" id="button-to-edit">
+            <input type="button" value="Back" class="button-to-back-on-first-page">
+        </form>
+    </div>
+</div>
+</body>
+</html>
